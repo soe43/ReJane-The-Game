@@ -16,7 +16,7 @@ money = 100
 inventory = []
 devon1 = False
 Ed1 = False
-Sang1 = False
+sang1 = False
 club = False
 
 def intro():
@@ -86,6 +86,7 @@ def day1Interface():
         while(choice != 'shop' and choice != 'sort' and choice != 'work' and choice != 'devon' and choice != 'ed' and choice != 'sang' and choice != 'club' and choice != 'bed'):
               choice = raw_input("What would you like to do?(Type the word that appears at the end of your choice's parentheses) ")
         if(choice == 'shop'):
+            current_time = current_time + 2
             print("\nYou make your way towards Flushing by riding the subway. A few hours later, you get off at Main Street.")
             print("Once you leave the station, you're at one of the busiest intersections in New York, right in front of a large Duane Reade.")   
             print("Equipped with your wallet, you get ready to shop.")
@@ -227,7 +228,7 @@ def shop(dayNumber):
             print("You already have that item")
             time.sleep(3)
             shop(dayNumber)
-        if(choice == 'Beer' and money >= 25 and 'Beer' in inventory):
+        if(choice == 'Beer' and money >= 25 and 'Beer' not in inventory):
             print('You bought: '+choice)
             time.sleep(3)
             inventory.append('Beer')
@@ -240,8 +241,8 @@ def shop(dayNumber):
         if(choice == 'Beer' and ('Beer' in inventory)):
             print("You already have that item")
             time.sleep(3)
-            shop(1)
-        if(choice == 'Dress' and money >= 80 and 'Dress' in inventory):
+            shop(dayNumber)
+        if(choice == 'Dress' and money >= 80 and 'Dress' not in inventory):
             print('You bought: '+choice)
             time.sleep(3)
             inventory.append('Dress')
@@ -376,7 +377,7 @@ def Devon(dayNumber):
                     time.sleep(4)
                     print("Devon: Mom, not in front of %s.\n")%(name)
                     time.sleep(3)
-                    print("Beth: She still fond of you, %s. I have to admit, you and my daughter are quite a pair.\n")%(name)
+                    print("Beth: She's still fond of you, %s. I have to admit, you and my daughter are quite a pair.\n")%(name)
                     time.sleep(4)
                     print("%s: Maybe because I was her au pair, huh?\n")%(name)
                     time.sleep(4)
