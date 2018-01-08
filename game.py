@@ -9,11 +9,15 @@ import random
 import sys
 import os
 
-name = ""
+name = "Jane"
 cheats = False
 current_time = 8
 money = 100
 inventory = []
+devon1 = False
+Ed1 = False
+Sang1 = False
+club = False
 
 def intro():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -95,16 +99,16 @@ def day1Interface():
             money = money + 75
             current_time = current_time + 6
             day1Interface()
-        if(choice == 'devon'):
+        if(choice == 'devon' and not(devon1)):
             current_time = current_time + 6
             Devon(1)
-        if(choice == 'ed'):
+        if(choice == 'ed' and not(ed1)):
             current_time = current_time + 6
             Ed(1)
-        if(choice == 'sang'):
+        if(choice == 'sang' and not(sang1)):
             current_time = current_time + 4
             Sang(1)
-        if(choice == 'club' and current_time >= 16 and current_time <= 18):
+        if(choice == 'club' and current_time >= 16 and current_time <= 18 and not(club)):
             current_time = current_time + 4
             club(1)
             if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
@@ -113,6 +117,11 @@ def day1Interface():
             story_2()
     else:
         print("I hear keys jingling near the front door. I'm pretty sure Nina's home.")
+        time.sleep(4)
+        print("Nina and I have a nice dinner while sharing about our days. Two hours later, we're in bed, getting.")
+        print("ready for tomorrow.")
+        time.sleep(7)
+        story_2()
        
 def shop(dayNumber):
     global money
@@ -265,22 +274,178 @@ def shop(dayNumber):
                 day1Interface()
 
 def Devon(dayNumber):
+    global current_time
+    global name
+    global devon1 
     os.system('cls' if os.name == 'nt' else 'clear')
-    return
+    print("It's about time that I go and see Devon. Let's go see how she's doing.\n")
+    time.sleep(3)
+    print("About an hour later, I arrived at the front of the Mazer's home. It's been a couple of months since")
+    print("I last came here. I want to say that Devon and I are better now, and that my relationship with Beth")
+    print("isn't in complete shambles, but after destroying their family, I can't say that they'll magically")
+    print("forgive me. I still don't forgive myself for what I have done. I still want to see Devon, though. I")
+    print("press the button on the door labelled B.MAZER, and wait for a response.\n")
+    time.sleep(17)
+    print("Brrrrring...Brrrrring...Brrrrring...\n")
+    time.sleep(5)
+    if(current_time <= 14):
+        print("I guess no one is home. I might come back later.")
+        time.sleep(4)
+        day1Interface()
+    elif(dayNumber == 1):
+        devon1 = True
+        print("Devon: Who's there? Leave the package on the front door if you have it!\n")
+        time.sleep(4)
+        print("%s: It's %s, Devon. Open the door.\n")%(name, name)
+        time.sleep(3)
+        print("Devon: I'm coming!\n")
+        time.sleep(3)
+        print("Devon opens the door. She's wearing her usual black clothing, with a shirt a size or two too big")
+        print("on her. Her body is still very slim, but she's grown quite a bit taller. She's approaching my eye level.\n")
+        time.sleep(7)
+        print("%s: Hey Devon! Were you expecting something?\n")%(name)
+        time.sleep(4)
+        print("Devon: Only the newest Evv-R-Blu album! Apparently it's going to be the last one they're")
+        print("releasing before the group disbands, so I had to get my hands on it.\n")
+        time.sleep(7)
+        print("%s: That's pretty cool. We should listen to it sometime.\n")%(name)
+        time.sleep(4)
+        print("Devon: Why not now? Come on in! I'll go get my CD player, and we'll listen to it together!\n")
+        time.sleep(4)
+        print("I walk in, and walk towards the living room.\n")
+        time.sleep(3)
+        print("%s: But your mother probably doesn't want me hanging around here. I just wanted to see how you were doing.")%(name)
+        print("I haven't seen you in a while, and wanted to ask you about Hunter and some other things.\n")
+        time.sleep(4)
+        print("Devon: Don't worry, my mom isn't coming home in...\n")
+        time.sleep(3)
+        print("BAM\n")
+        time.sleep(3)
+        print("We could hear the front door slam open.\n")
+        time.sleep(3)
+        print("Beth: Devon? I'm home! Devon? DEVON WHERE ARE YOU?\n")
+        time.sleep(4)
+        print("Devon: God... she's home early? I thought she had work today. What are you going to do?\n")
+        decision = ""
+        while(decision != "Confront Beth" and decision != "Try to Run"):
+            decision = raw_input("What are you going to do? (Confront Beth/Try to Run)\n")
+            if(decision == "Try to Run"):
+                print("%s: Devon, I have to go now. Maybe we'll catch up later?\n")%(name)
+                time.sleep(4)
+                print("Devon: I understand. Just wait for her to pass by.\n")
+                time.sleep(4)
+                print("You wait a few seconds for Beth to start walking by. You peer out through the living room door and spot Beth.")
+                print("Beth looks frantic. She must think that Devon left the house. I wait for her footsteps to pass though the")
+                print("living room door. I hear pass the living room. She's still screaming for Devon.")
+                time.sleep(10)
+                print("Devon: Now's your chance! Go!\n")
+                time.sleep(4)
+                print("I made my way to the door. Beth forgot to close it. I first walk out, then I race to the train station.\n")
+                time.sleep(5)
+                print("What a mess.")
+                time.sleep(4)
+                day1Interface()
+            if(decision == "Confront Beth"):
+                print("%s: I'm going to talk to her.\n")%(name)
+                time.sleep(4)
+                print("Devon: What?!?\n")
+                time.sleep(3)
+                print("I step out of the living room and into the hallway. In front of me is Beth Mazer.") 
+                print("She looks skinnier than usual. However, there is the faint, yet lingering smell of onions coming from")
+                print("her direction.\n")
+                time.sleep(5)
+                print("Beth: %s? What are you doing here? What the hell did you do with Devon? Where is she? Where the f--- is")%(name)
+                print("my daughter?\n")
+                time.sleep(5)
+                if('Veges' in inventory):
+                    print("%s: Oh, I just came to give you some organic vegetables. As an apology for coming in last time.\n")%(name)
+                    time.sleep(4)
+                    print("Beth: Oh, so you think you can come in before you apologized?\n")
+                    time.sleep(3)
+                    print("She had a point.\n")
+                    time.sleep(3)
+                    print("Beth: But thank you. I appreciate the gift. But still, is Devon here?\n")
+                    time.sleep(4)
+                    print("%s: Yea, she's still here. She's in her room. She wasn't answering because she was trying to hide me.\n")%(name)
+                    time.sleep(5)
+                    print("Devon: Well thanks for ratting me out. Welcome home, mom.\n")
+                    time.sleep(4)
+                    print("Beth: Thank god you're ok. You're all that I have left.\n")
+                    time.sleep(3)
+                    print("Beth goes in for an embrace, but Devon quickly shuffles back and hides behind me.\n")
+                    time.sleep(4)
+                    print("Devon: Mom, not in front of %s.\n")%(name)
+                    time.sleep(3)
+                    print("Beth: She still fond of you, %s. I have to admit, you and my daughter are quite a pair.\n")%(name)
+                    time.sleep(4)
+                    print("%s: Maybe because I was her au pair, huh?\n")%(name)
+                    time.sleep(4)
+                    print("Beth: Maybe you two were meant to be. But I'll have you know that I can still never forgive you for Ed.\n")
+                    time.sleep(5)
+                    print("%s: I understand, Ms. Mazer.\n")%(name)
+                    time.sleep(3)
+                    print("Beth: Please, call me Beth. And if Devon is happy with you, you're free to see her when you want.")
+                    print("Just keep your activities within this house, please.\n")
+                    time.sleep(7)
+                    print("%s: Thank you, Beth. I'll make sure to take care of Devon when I do.\n")%(name)
+                    time.sleep(4)
+                    print("Devon: We'll listen the next time you come, ok? Promise me!\n")
+                    time.sleep(4)
+                    print("%s: I promise. I have to get going now, but it was great meeting you two. Thanks for having me.\n")%(name)
+                    time.sleep(5)
+                    print("This is a promise I will not break.\n")
+                    time.sleep(4)
+                    print("Beth: See you around, %s. Say hi to Sang for me, will you?\n")%(name)
+                    time.sleep(4)
+                    print("%s: I will. Bye Beth. Bye Devon. See you around.\n")%(name)
+                    time.sleep(5)
+                    devon1 = True
+                    print("You have completed the Devon storyline!\n")
+                    cont = ""
+                    while(cont != "continue"):
+                        cont = raw_input("Type 'continue' to continue.")
+                    if(cont == 'continue'):
+                        day1Interface()
+                else:
+                    print("%s: Your daughter is in her room. Calm down, Beth.\n")%(name)
+                    time.sleep(4)
+                    print("Beth: Calm down? I thought I just lost my daughter, the one person I have left! And now you're in my house?")
+                    print("I told you before, and now before I call the cops, get the f--- out of my home.\n")
+                    time.sleep(7)
+                    print("As soon as she said those words, I scrambled out of her home, and rushed towards the exit.\n")
+                    time.sleep(5)
+                    print("What a mess.\n")
+                    print("Hint: Try to get Beth a gift.")
+                    time.sleep(8)
+                    day1Interface()
+
 def Ed(dayNumber):
     os.system('cls' if os.name == 'nt' else 'clear')
-    return
+    print("Sorry, this option is not available yet.")
+    time.sleep(4)
+    if(dayNumber == 1):
+        day1Interface()
+
 def Sang(dayNumber):
     os.system('cls' if os.name == 'nt' else 'clear')
-    return
+    print("Sorry, this option is not available yet.")
+    time.sleep(4)
+    if(dayNumber == 1):
+        day1Interface()
+
 def club(dayNumber):
     os.system('cls' if os.name == 'nt' else 'clear')
-    return
+    print("Sorry, this option is not available yet.")
+    time.sleep(4)
+    if(dayNumber == 1):
+        day1Interface()
+
 def story_2():
     os.system('cls' if os.name == 'nt' else 'clear')
     return
 def day2Interface():
     os.system('cls' if os.name == 'nt' else 'clear')
+    return
 
 def runGame():
     intro()
