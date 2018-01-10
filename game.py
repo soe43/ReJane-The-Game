@@ -1,4 +1,4 @@
-#Name: William Soe
+B#Name: William Soe
 #ReJane: The Game
 #Ms. Thoms British Literature
 #Period 7
@@ -103,7 +103,7 @@ def day1Interface():
         if(choice == 'devon' and not(devon1)):
             current_time = current_time + 6
             Devon(1)
-        if(choice == 'ed' and not(ed1)):
+        if(choice == 'ed' and not(Ed1)):
             current_time = current_time + 6
             Ed(1)
         if(choice == 'sang' and not(sang1)):
