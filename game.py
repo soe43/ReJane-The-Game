@@ -62,7 +62,7 @@ def story_1():
     print("from the chaos that was brewing back in Seoul, and wanted to catch up with me and Rachel.\n")
     time.sleep(15)
     print("You push yourself off your bed, wash up, and eat breakfast. You are finally ready to start your day.\n")
-    time.sleep(7)
+    pause = raw_input("Press Enter To Continue")
 
 def day1Interface():
     global current_time
@@ -115,13 +115,26 @@ def day1Interface():
             if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
                 print("The club isn't open yet.")
         if(choice == 'bed'):
+            print("For some reason, you're feeling really sleepy. You decide to go to sleep early so that you'll be refreshed by tomorrow.\n")
+            time.sleep(4)
+            print("As you lie in bed, you mentally prepare yourself for Changhoon's arrival. He told you over the phone that'll he'll be touching down")
+            print("at JFK at around 7:00pm (19:00). It's been a couple of months since you last saw him, and the last time you saw him he was essentially")
+            print("proposing to you. You only left him because of Ed. Maybe now things can change.\m")
+            time.sleep(10)
+            pause = raw_input("Press Enter To Continue")
             story_2()
     else:
         print("I hear keys jingling near the front door. I'm pretty sure Nina's home.")
         time.sleep(4)
-        print("Nina and I have a nice dinner while sharing about our days. Two hours later, we're in bed, getting.")
-        print("ready for tomorrow.")
+        print("Nina and I have a nice dinner while sharing about our days. Two hours later, we're off bed, getting")
+        print("ready for tomorrow.\n")
         time.sleep(7)
+        print("As you lie in bed, you mentally prepare yourself for Changhoon's arrival. He told you over the phone that'll he'll be touching down")
+        print("at JFK at around 7:00pm (19:00). It's been a couple of months since you last saw him, and the last time you saw him he was essentially")
+        print("proposing to you. You only left him because of Ed. Maybe now things can change.\m")
+        time.sleep(10)
+        pause = raw_input("Press Enter To Continue to Day 2")
+        current_time = 8
         story_2()
        
 def shop(dayNumber):
@@ -443,10 +456,22 @@ def club(dayNumber):
 
 def story_2():
     os.system('cls' if os.name == 'nt' else 'clear')
-    return
+
+    day2Interface():
 def day2Interface():
     os.system('cls' if os.name == 'nt' else 'clear')
-    return
+    global current_time
+    global money
+    os.system('cls' if os.name == 'nt' else 'clear')
+    if(current_time < 22):
+        print("\nDay 1")
+        print("Current Time: " + str(current_time) + ":00")
+        print("Money: $" + str(money))
+        print("\nWhat would you like to do?\n")
+        print("Options:")
+        print("Go Shopping (+2 Hours, shop)")
+        print("Sort Some Files(+1 Hour, +$5, sort)")
+        print("Do Some Work (+6 Hours, +$75, work)")
 
 def runGame():
     intro()
