@@ -1,4 +1,4 @@
-B#Name: William Soe
+#Name: William Soe
 #ReJane: The Game
 #Ms. Thoms British Literature
 #Period 7
@@ -35,7 +35,7 @@ def naming():
         cheats = True
     print("Hello " + new_name + "! Let's begin.\n")
     name = new_name
-    time.sleep(3)
+    time.sleep(4)
 
 def story_1():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -430,7 +430,7 @@ def Devon(dayNumber):
                     time.sleep(5)
                     print("What a mess.\n")
                     print("Hint: Try to get Beth a gift.")
-                    time.sleep(8)
+                    pause = raw_input("Press Enter To Continue")
                     day1Interface()
 
 def Ed(dayNumber):
@@ -457,7 +457,8 @@ def club(dayNumber):
 def story_2():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-    day2Interface():
+    day2Interface()
+    
 def day2Interface():
     os.system('cls' if os.name == 'nt' else 'clear')
     global current_time
@@ -480,12 +481,12 @@ def runGame():
     day1Interface()
 
 #Run the Game
-runGame()
+#runGame()
 
 #Stuff for debugging
 #intro()
 #naming()
-#story_1()
+story_1()
 #day1Interface()
           
     
