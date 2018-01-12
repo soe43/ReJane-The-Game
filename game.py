@@ -598,6 +598,12 @@ def ChanghoonEnding():
         saw_clothes = True
     else:
         print("Changhoon: Gamsa(thank you), %s. Is that the fashion trend here in America?\n")%(name)
+        time.sleep(4)
+        print("%s: Yeah, yeah, this shirt is very popular in the U.S. nowadays.\n")%(name)
+        time.sleep(4)
+        print("Congratulations! You made it to the last tree of this beta mode. to start the game over, ")
+        print("press enter and run the game again.")
+        pause = raw_input("Press Enter")
         
 def runGame():
     intro()
@@ -606,7 +612,7 @@ def runGame():
     day1Interface()
 
 #Run the Game
-#runGame()
+runGame()
 
 #Stuff for debugging
 #intro()
@@ -614,6 +620,6 @@ def runGame():
 #story_1()
 #day1Interface()
 #story_2()
-day2Interface()         
+#day2Interface()         
     
     
