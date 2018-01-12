@@ -553,7 +553,7 @@ def runGame():
     day1Interface()
 
 #Run the Game
-runGame()
+#runGame()
 
 #Stuff for debugging
 #intro()
