@@ -34,7 +34,7 @@ def naming():
     new_name = raw_input('What would you like your name to be? (Press Enter to Keep Default Name)')
     if(new_name == "dev"):
         cheats = True
-    print("Hello " + new_name + "! Let's begin.\n")
+    print("Hello " + name + "! Let's begin.\n")
     name = new_name
     time.sleep(4)
 
