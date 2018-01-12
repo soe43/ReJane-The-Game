@@ -31,7 +31,7 @@ def intro():
 def naming():
     global name
     os.system('cls' if os.name == 'nt' else 'clear')
-    new_name = raw_input('What would you like your name to be? ')
+    new_name = raw_input('What would you like your name to be? (Press Enter to Keep Default Name)')
     if(new_name == "dev"):
         cheats = True
     print("Hello " + new_name + "! Let's begin.\n")
@@ -91,7 +91,7 @@ def day1Interface():
             print("\nYou make your way towards Flushing by riding the subway. A few hours later, you get off at Main Street.")
             print("Once you leave the station, you're at one of the busiest intersections in New York, right in front of a large Duane Reade.")   
             print("Equipped with your wallet, you get ready to shop.")
-            time.sleep(10)
+            time.sleep(8)
             shop(1)
         if(choice == 'sort'):
             money = money + 5
@@ -513,7 +513,7 @@ def day2Interface():
                 print("\nYou make your way towards Flushing by riding the subway. A few hours later, you get off at Main Street.")
                 print("Once you leave the station, you're at one of the busiest intersections in New York, right in front of a large Duane Reade.")   
                 print("Equipped with your wallet, you get ready to shop.")
-                time.sleep(10)
+                time.sleep(8)
                 shop(2)
             if(choice == 'sort'):
                 money = money + 5
@@ -553,13 +553,14 @@ def day2Interface():
         print("It's time to go and pick up Changhoon from the airport. I hope he still remembers what I look like.\n")
         time.sleep(4)
         if('Blouse and Pants' in inventory):
-            print("I put on the stylish blouse and pants that I bought when I went out shopping. After trying it on, you look at yourself in the mirror.\n")
+            print("I put on the stylish blouse and pants that I bought when I went out shopping. After trying it on, I looked at myself in the mirror.\n")
             time.sleep(5)
-            print("You are definitely going to get some head turns with this outfit.\n")
+            print("I'm definitely going to get some head turns with this outfit.\n")
+            ChanghoonEnding()
         elif('Blouse and Pants' not in inventory):
-            print("You look around through your house, but you realized you forgot to do your laundry. In a panic, you scramble around looking for any spare clothes")
-            print("around the apartment. You end up finding your old 1999 Disney World t-shirt and a pair of flared blue jeans. After putting it on, you look")
-            print("at yourself in the mirror.\n")
+            print("I look around through the house, but I realized I forgot to do the laundry. In a panic, I scramble around looking for any spare clothes")
+            print("around the apartment. I end up finding my old 1999 Disney World t-shirt and a pair of flared blue jeans. After putting it on, I look")
+            print("at myself in the mirror.\n")
             time.sleep(10)
             print("Changhoon is going to get right back on the plane back to Korea after seeing me.\n")
             pause = raw_input("Press Enter To Continue ")
@@ -588,7 +589,16 @@ def ChanghoonEnding():
     time.sleep(4)
     print("Real smooth there.\n")
     time.sleep(4)
-
+    if('Blouse and Pants' in inventory):
+        print("Changhoon: Gomahwuh(thank you), %s. You look really good today. You still have good style.\n")%(name)
++        time.sleep(4)
+        print("%s: Thanks, Changhoon. I bought it just for you.\n")%(name)
+        time.sleep(4)
+        print("I had to buy it if I didn't want to wear some less attractive pieces of clothing.\n")
+        saw_clothes = True
+    else:
+        print("Changhoon: Gamsa(thank you), %s. Is that the fashion trend here in America?\n")%(name)
+        
 def runGame():
     intro()
     naming()
