@@ -522,7 +522,7 @@ def day2Interface():
                 makeup = True
                 money = money - 10
                 current_time = current_time + 1
-                print("If you're headed out, you have to tidy up a little bit. You put on some foundation, blush,")
+                print("\nIf you're headed out, you have to tidy up a little bit. You put on some foundation, blush,")
                 print("and lipstick. You look similar to the Korean version of %s.")%(name)
                 pause = raw_input("Press Enter To Continue ")
                 day2Interface()
