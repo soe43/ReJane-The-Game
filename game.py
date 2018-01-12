@@ -537,6 +537,7 @@ def day2Interface():
                 club(2)
                 if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
                     print("The club isn't open yet.")
+                    day2Interface()
         else:
             print("It's time to go and pick up Changhoon from the airport. I hope he still remembers what I look like.\n")
             pause = raw_input("Press Enter To Continue ")
