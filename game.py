@@ -549,19 +549,19 @@ def day2Interface():
                 print("\nYou chilled out and waited for Changhoon's arrival time.")
                 time.sleep(4)
                 day2Interface()
-        else:
-            print("It's time to go and pick up Changhoon from the airport. I hope he still remembers what I look like.\n")
-            time.sleep(4)
-            if('Blouse and Pants' in inventory):
-                print("I put on the stylish blouse and pants that I bought when I went out shopping. After trying it on, you look at yourself in the mirror.\n")
-                time.sleep(5)
-                print("You are definitely going to get some head turns with this outfit.\n")
-            elif('Blouse and Pants' not in inventory):
-                print("You look around through your house, but you realized you forgot to do your laundry. In a panic, you scramble around looking for any spare clothes")
-                print("around the apartment. You end up finding your old 1999 Disney World t-shirt and a pair of flared blue jeans. After putting it on, you look")
-                print("at yourself in the mirror.\n")
-                time.sleep(10)
-                print("Changhoon is going to get right back on the plane back to Korea after seeing me.\n")
+    else:
+        print("It's time to go and pick up Changhoon from the airport. I hope he still remembers what I look like.\n")
+        time.sleep(4)
+        if('Blouse and Pants' in inventory):
+            print("I put on the stylish blouse and pants that I bought when I went out shopping. After trying it on, you look at yourself in the mirror.\n")
+            time.sleep(5)
+            print("You are definitely going to get some head turns with this outfit.\n")
+        elif('Blouse and Pants' not in inventory):
+            print("You look around through your house, but you realized you forgot to do your laundry. In a panic, you scramble around looking for any spare clothes")
+            print("around the apartment. You end up finding your old 1999 Disney World t-shirt and a pair of flared blue jeans. After putting it on, you look")
+            print("at yourself in the mirror.\n")
+            time.sleep(10)
+            print("Changhoon is going to get right back on the plane back to Korea after seeing me.\n")
             pause = raw_input("Press Enter To Continue ")
             ChanghoonEnding()
 
@@ -574,9 +574,9 @@ def ChanghoonEnding():
     time.sleep(5)
     print("2 Hours Later\n")
     time.sleep(3)
-    print("In classic fashion, I was an hour late to Changhoon's arrival. We got caught up in some traffic on the Van Wyck Expressway, with the driver yelling at the car in front")
-    print("of him the entire time. When the taxi finally pulled up to the arrivals entrance of Terminal 1, where Korean Air lands, I hastily paid the driver and ran inside. The space")
-    print("was gigantic. There were people bustling left and right, but the only person I cared about wasn't in sight. I looked through the entire gate area, but he was no where in sight.\n")
+    print("In classic fashion, I was an hour late to Changhoon's arrival. We got caught up in some traffic on the Van Wyck Expressway, with the driver yelling")
+    print(" at the car in front of him the entire time. When the taxi finally pulled up to the arrivals entrance of Terminal 1, where Korean Air lands, I hastily paid the driver and ran inside.")
+    print("The space was gigantic. There were people bustling left and right, but the only person I cared about wasn't in sight. I looked through the entire gate area, but he was no where in sight.\n")
     time.sleep(14)
     print("?: %s? I'm here!\n")%(name)
     time.sleep(4)
