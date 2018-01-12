@@ -113,8 +113,8 @@ def day1Interface():
         if(choice == 'club' and current_time >= 16 and current_time <= 18 and not(club)):
             current_time = current_time + 4
             club(1)
-            if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
-                print("The club isn't open yet.")
+        if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
+            print("The club isn't open yet.")
         if(choice == 'bed'):
             print("For some reason, you're feeling really sleepy. You decide to go to sleep early so that you'll be refreshed by tomorrow.\n")
             time.sleep(4)
@@ -537,9 +537,9 @@ def day2Interface():
             if(choice == 'club' and current_time >= 16 and current_time <= 18 and not(club)):
                 current_time = current_time + 4
                 club(2)
-                elif(choice == 'club' and (current_time <= 16 or current_time >= 18)):
-                    print("The club isn't open yet.")
-                    day2Interface()
+            if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
+                print("The club isn't open yet.")
+                day2Interface()
         else:
             print("It's time to go and pick up Changhoon from the airport. I hope he still remembers what I look like.\n")
             pause = raw_input("Press Enter To Continue ")
