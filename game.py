@@ -463,6 +463,8 @@ def club(dayNumber):
     time.sleep(4)
     if(dayNumber == 1):
         day1Interface()
+    if(dayNumber == 2):
+        day2Interface()
 
 def story_2():
     global name
@@ -535,7 +537,7 @@ def day2Interface():
             if(choice == 'club' and current_time >= 16 and current_time <= 18 and not(club)):
                 current_time = current_time + 4
                 club(2)
-                if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
+                elif(choice == 'club' and (current_time <= 16 or current_time >= 18)):
                     print("The club isn't open yet.")
                     day2Interface()
         else:
