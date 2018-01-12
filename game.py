@@ -560,7 +560,7 @@ def runGame():
 #naming()
 #story_1()
 #day1Interface()
-story2()
+story_2()
           
     
     
