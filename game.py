@@ -115,6 +115,8 @@ def day1Interface():
             club(1)
         if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
             print("The club isn't open yet.")
+            time.sleep(5)
+            day1Interface()
         if(choice == 'bed'):
             print("For some reason, you're feeling really sleepy. You decide to go to sleep early so that you'll be refreshed by tomorrow.\n")
             time.sleep(4)
@@ -440,7 +442,7 @@ def Ed(dayNumber):
     global Ed
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Sorry, this option is not available yet.")
-    time.sleep(4)
+    time.sleep(5)
     if(dayNumber == 1):
         day1Interface()
     if(dayNumber == 2):
@@ -450,7 +452,7 @@ def Sang(dayNumber):
     global sang
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Sorry, this option is not available yet.")
-    time.sleep(4)
+    time.sleep(5)
     if(dayNumber == 1):
         day1Interface()
     if(dayNumber == 2):
@@ -460,7 +462,7 @@ def club(dayNumber):
     global club
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Sorry, this option is not available yet.")
-    time.sleep(4)
+    time.sleep(5)
     if(dayNumber == 1):
         day1Interface()
     if(dayNumber == 2):
@@ -489,7 +491,7 @@ def day2Interface():
     global name
     os.system('cls' if os.name == 'nt' else 'clear')
     if(current_time < 19):
-        print("\nDay 1")
+        print("\nDay 2")
         print("Current Time: " + str(current_time) + ":00")
         print("Money: $" + str(money))
         print("\nWhat would you like to do?\n")
@@ -539,6 +541,7 @@ def day2Interface():
                 club(2)
             if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
                 print("The club isn't open yet.")
+                time.sleep(5)
                 day2Interface()
         else:
             print("It's time to go and pick up Changhoon from the airport. I hope he still remembers what I look like.\n")
