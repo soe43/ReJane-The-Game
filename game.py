@@ -502,45 +502,45 @@ def day2Interface():
         print("Just Chill (+ 11 Hours, chill)")
         choice = ''
         while(choice != 'shop' and choice != 'sort' and choice != 'work' and choice != 'makeup' and choice != 'ed' and choice != 'chill' and choice != 'sang' and choice != 'club'):
-        choice = raw_input("What would you like to do?(Type the word that appears at the end of your choice's parentheses) ")
-        if(choice == 'shop'):
-            current_time = current_time + 2
-            print("\nYou make your way towards Flushing by riding the subway. A few hours later, you get off at Main Street.")
-            print("Once you leave the station, you're at one of the busiest intersections in New York, right in front of a large Duane Reade.")   
-            print("Equipped with your wallet, you get ready to shop.")
-            time.sleep(10)
-            shop(2)
-        if(choice == 'sort'):
-            money = money + 5
-            current_time = current_time + 1
-            day2Interface()
-        if(choice == 'work'):
-            money = money + 75
-            current_time = current_time + 6
-            day2Interface()
-        if(choice == 'makeup'):
-            makeup = True
-            money = money - 10
-            current_time = current_time + 1
-            print("If you're headed out, you have to tidy up a little bit. You put on some foundation, blush,")
-            print("and lipstick. You look similar to the Korean version of %s.")%(name)
+            choice = raw_input("What would you like to do?(Type the word that appears at the end of your choice's parentheses) ")
+            if(choice == 'shop'):
+                current_time = current_time + 2
+                print("\nYou make your way towards Flushing by riding the subway. A few hours later, you get off at Main Street.")
+                print("Once you leave the station, you're at one of the busiest intersections in New York, right in front of a large Duane Reade.")   
+                print("Equipped with your wallet, you get ready to shop.")
+                time.sleep(10)
+                shop(2)
+            if(choice == 'sort'):
+                money = money + 5
+                current_time = current_time + 1
+                day2Interface()
+            if(choice == 'work'):
+                money = money + 75
+                current_time = current_time + 6
+                day2Interface()
+            if(choice == 'makeup'):
+                makeup = True
+                money = money - 10
+                current_time = current_time + 1
+                print("If you're headed out, you have to tidy up a little bit. You put on some foundation, blush,")
+                print("and lipstick. You look similar to the Korean version of %s.")%(name)
+                pause = raw_input("Press Enter To Continue ")
+                day2Interface()
+            if(choice == 'ed' and not(Ed)):
+                current_time = current_time + 6
+                Ed(2)
+            if(choice == 'sang' and not(sang)):
+                current_time = current_time + 4
+                Sang(2)
+            if(choice == 'club' and current_time >= 16 and current_time <= 18 and not(club)):
+                current_time = current_time + 4
+                club(2)
+                if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
+                    print("The club isn't open yet.")
+        else:
+            print("It's time to go and pick up Changhoon from the airport. I hope he still remembers what I look like.\n")
             pause = raw_input("Press Enter To Continue ")
-            day2Interface()
-        if(choice == 'ed' and not(Ed)):
-            current_time = current_time + 6
-            Ed(2)
-        if(choice == 'sang' and not(sang)):
-            current_time = current_time + 4
-            Sang(2)
-        if(choice == 'club' and current_time >= 16 and current_time <= 18 and not(club)):
-            current_time = current_time + 4
-            club(2)
-            if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
-                print("The club isn't open yet.")
-    else:
-        print("It's time to go and pick up Changhoon from the airport. I hope he still remembers what I look like.\n")
-        pause = raw_input("Press Enter To Continue ")
-        ChanghoonEnding()
+            ChanghoonEnding()
 
 def ChanghoonEnding():
     os.system('cls' if os.name == 'nt' else 'clear')
