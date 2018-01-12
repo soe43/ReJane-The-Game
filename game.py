@@ -15,9 +15,10 @@ current_time = 8
 money = 100
 inventory = []
 devon1 = False
-Ed1 = False
-sang1 = False
+Ed = False
+Sang = False
 club = False
+makeup = False
 
 def intro():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -43,7 +44,7 @@ def story_1():
     print("through the windows of your ginormous floor-through apartment. The clanging of pots and pans echoed throughout the apartment, the sounds of which")
     print("wake you up. The smell of burned toast, bacon, and black coffee was pungent, and was a telltale sign that Nina was getting ready to leave.\n")
     time.sleep(10)
-    print("Nina: I'm heading out %s! I don't think there's any paperwork for you today. Do what you want, I'll be back for dinner!\n")%(name)
+    print("Nina: I'm heading out %s! I don't think there's any paperwork for you today. Do what you want, I'll be back at around 10pm(22:00) for dinner!\n")%(name)
     time.sleep(3)
     response = ""
     while(response != 'yes' and response != 'no'):
@@ -62,7 +63,7 @@ def story_1():
     print("from the chaos that was brewing back in Seoul, and wanted to catch up with me and Rachel.\n")
     time.sleep(15)
     print("You push yourself off your bed, wash up, and eat breakfast. You are finally ready to start your day.\n")
-    pause = raw_input("Press Enter To Continue")
+    pause = raw_input("Press Enter To Continue ")
 
 def day1Interface():
     global current_time
@@ -84,7 +85,7 @@ def day1Interface():
         print("Go to Bed (Proceed to Next Day, bed)\n")
         choice = ''
         while(choice != 'shop' and choice != 'sort' and choice != 'work' and choice != 'devon' and choice != 'ed' and choice != 'sang' and choice != 'club' and choice != 'bed'):
-              choice = raw_input("What would you like to do?(Type the word that appears at the end of your choice's parentheses) ")
+        choice = raw_input("What would you like to do?(Type the word that appears at the end of your choice's parentheses) ")
         if(choice == 'shop'):
             current_time = current_time + 2
             print("\nYou make your way towards Flushing by riding the subway. A few hours later, you get off at Main Street.")
@@ -103,10 +104,10 @@ def day1Interface():
         if(choice == 'devon' and not(devon1)):
             current_time = current_time + 6
             Devon(1)
-        if(choice == 'ed' and not(Ed1)):
+        if(choice == 'ed' and not(Ed)):
             current_time = current_time + 6
             Ed(1)
-        if(choice == 'sang' and not(sang1)):
+        if(choice == 'sang' and not(sang)):
             current_time = current_time + 4
             Sang(1)
         if(choice == 'club' and current_time >= 16 and current_time <= 18 and not(club)):
@@ -121,7 +122,7 @@ def day1Interface():
             print("at JFK at around 7:00pm (19:00). It's been a couple of months since you last saw him, and the last time you saw him he was essentially")
             print("proposing to you. You only left him because of Ed. Maybe now things can change.\m")
             time.sleep(10)
-            pause = raw_input("Press Enter To Continue")
+            pause = raw_input("Press Enter To Continue ")
             story_2()
     else:
         print("I hear keys jingling near the front door. I'm pretty sure Nina's home.")
@@ -133,7 +134,7 @@ def day1Interface():
         print("at JFK at around 7:00pm (19:00). It's been a couple of months since you last saw him, and the last time you saw him he was essentially")
         print("proposing to you. You only left him because of Ed. Maybe now things can change.\m")
         time.sleep(10)
-        pause = raw_input("Press Enter To Continue to Day 2")
+        pause = raw_input("Press Enter To Continue to Day 2 ")
         current_time = 8
         story_2()
        
@@ -286,6 +287,8 @@ def shop(dayNumber):
         if(choice == 'Home'):
             if(dayNumber == 1):
                 day1Interface()
+            if(dayNumber == 2):
+                day2Interface()
 
 def Devon(dayNumber):
     global current_time
@@ -430,24 +433,31 @@ def Devon(dayNumber):
                     time.sleep(5)
                     print("What a mess.\n")
                     print("Hint: Try to get Beth a gift.")
-                    pause = raw_input("Press Enter To Continue")
+                    pause = raw_input("Press Enter To Continue ")
                     day1Interface()
 
 def Ed(dayNumber):
+    global Ed
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Sorry, this option is not available yet.")
     time.sleep(4)
     if(dayNumber == 1):
         day1Interface()
+    if(dayNumber == 2):
+        day2Interface()
 
 def Sang(dayNumber):
+    global sang
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Sorry, this option is not available yet.")
     time.sleep(4)
     if(dayNumber == 1):
         day1Interface()
+    if(dayNumber == 2):
+        day2Interface()
 
 def club(dayNumber):
+    global club
     os.system('cls' if os.name == 'nt' else 'clear')
     print("Sorry, this option is not available yet.")
     time.sleep(4)
@@ -455,16 +465,28 @@ def club(dayNumber):
         day1Interface()
 
 def story_2():
+    global name
     os.system('cls' if os.name == 'nt' else 'clear')
-
+    print("The morning was filled with a light drizzle that blanketed New York with rain. The clouds completely blocked at the sun, where")
+    print("you could only see the soft glow of light emananting from behind the clouds. Aside from the light, the rest of the city was pitch")
+    print("black, although it was 8am already. Nina was already gone, and she had left a note on my bedstand. It read:\n")
+    time.sleep(14)
+    print("%s, I had to leave early today because someone called with a plumbing problem. Remember that Changhoon's coming at 7pm!")%(name)
+    print("If you want, you can head out and buy some gifts for him to welcome him. I'll be at the airport around then, so dont be late!\n")
+    print("Nina\n")
+    time.sleep(10)
+    print("I guess it's time for me to get up and get ready to meet Changhoon.\n")
+    pause = raw_input("Press Enter To Continue ")
     day2Interface()
     
 def day2Interface():
     os.system('cls' if os.name == 'nt' else 'clear')
     global current_time
     global money
+    global makeup
+    global name
     os.system('cls' if os.name == 'nt' else 'clear')
-    if(current_time < 22):
+    if(current_time < 19):
         print("\nDay 1")
         print("Current Time: " + str(current_time) + ":00")
         print("Money: $" + str(money))
@@ -473,6 +495,56 @@ def day2Interface():
         print("Go Shopping (+2 Hours, shop)")
         print("Sort Some Files(+1 Hour, +$5, sort)")
         print("Do Some Work (+6 Hours, +$75, work)")
+        print("Put Makeup On (+1 Hour, -$10, makeup)")
+        print("Visit Ed (+6 Hours, ed)")
+        print("Visit Sang (+4 Hours, sang)")
+        print("Visit the Club (+4 Hours, Available between 16:00 and 18:00, club)")
+        print("Just Chill (+ 11 Hours, chill)")
+        choice = ''
+        while(choice != 'shop' and choice != 'sort' and choice != 'work' and choice != 'makeup' and choice != 'ed' and choice != 'chill' and choice != 'sang' and choice != 'club'):
+        choice = raw_input("What would you like to do?(Type the word that appears at the end of your choice's parentheses) ")
+        if(choice == 'shop'):
+            current_time = current_time + 2
+            print("\nYou make your way towards Flushing by riding the subway. A few hours later, you get off at Main Street.")
+            print("Once you leave the station, you're at one of the busiest intersections in New York, right in front of a large Duane Reade.")   
+            print("Equipped with your wallet, you get ready to shop.")
+            time.sleep(10)
+            shop(2)
+        if(choice == 'sort'):
+            money = money + 5
+            current_time = current_time + 1
+            day2Interface()
+        if(choice == 'work'):
+            money = money + 75
+            current_time = current_time + 6
+            day2Interface()
+        if(choice == 'makeup'):
+            makeup = True
+            money = money - 10
+            current_time = current_time + 1
+            print("If you're headed out, you have to tidy up a little bit. You put on some foundation, blush,")
+            print("and lipstick. You look similar to the Korean version of %s.")%(name)
+            pause = raw_input("Press Enter To Continue ")
+            day2Interface()
+        if(choice == 'ed' and not(Ed)):
+            current_time = current_time + 6
+            Ed(2)
+        if(choice == 'sang' and not(sang)):
+            current_time = current_time + 4
+            Sang(2)
+        if(choice == 'club' and current_time >= 16 and current_time <= 18 and not(club)):
+            current_time = current_time + 4
+            club(2)
+            if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
+                print("The club isn't open yet.")
+    else:
+        print("It's time to go and pick up Changhoon from the airport. I hope he still remembers what I look like.\n")
+        pause = raw_input("Press Enter To Continue ")
+        ChanghoonEnding()
+
+def ChanghoonEnding():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    return
 
 def runGame():
     intro()
@@ -481,13 +553,14 @@ def runGame():
     day1Interface()
 
 #Run the Game
-#runGame()
+runGame()
 
 #Stuff for debugging
 #intro()
 #naming()
-story_1()
+#story_1()
 #day1Interface()
+story2()
           
     
     
