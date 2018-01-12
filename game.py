@@ -85,7 +85,7 @@ def day1Interface():
         print("Go to Bed (Proceed to Next Day, bed)\n")
         choice = ''
         while(choice != 'shop' and choice != 'sort' and choice != 'work' and choice != 'devon' and choice != 'ed' and choice != 'sang' and choice != 'club' and choice != 'bed'):
-        choice = raw_input("What would you like to do?(Type the word that appears at the end of your choice's parentheses) ")
+        choice = raw_input("What would you like to do?(Type the word that appears at the end of your choice's parentheses)")
         if(choice == 'shop'):
             current_time = current_time + 2
             print("\nYou make your way towards Flushing by riding the subway. A few hours later, you get off at Main Street.")
