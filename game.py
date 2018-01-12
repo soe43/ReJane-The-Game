@@ -16,7 +16,7 @@ money = 100
 inventory = []
 devon1 = False
 Ed = False
-Sang = False
+sang = False
 club = False
 makeup = False
 
@@ -556,7 +556,7 @@ def day2Interface():
                 print("I put on the stylish blouse and pants that I bought when I went out shopping. After trying it on, you look at yourself in the mirror.\n")
                 time.sleep(5)
                 print("You are definitely going to get some head turns with this outfit.\n")
-            else:
+            elif('Blouse and Pants' not in inventory):
                 print("You look around through your house, but you realized you forgot to do your laundry. In a panic, you scramble around looking for any spare clothes")
                 print("around the apartment. You end up finding your old 1999 Disney World t-shirt and a pair of flared blue jeans. After putting it on, you look")
                 print("at yourself in the mirror.\n")
@@ -580,8 +580,8 @@ def ChanghoonEnding():
     time.sleep(14)
     print("?: %s? I'm here!\n")%(name)
     time.sleep(4)
-    print("I recognized that voice instantly. I turned around, and about 5 inches away from my face was Changhoon. He looked a little bit different from before. His hair was longer, and he")
-    print("was starting to grow some stubble on his chin. He smiled at me, and it was the same Park Ji-Sung smile from before. Man, was he handsome.\n")
+    print("I recognized that voice instantly. I turned around, and about 5 inches away from my face was Changhoon. He looked a little bit different from before.")
+    print("His hair was longer, and he was starting to grow some stubble on his chin. He smiled at me, and it was the same Park Ji-Sung smile from before. Man, was he handsome.\n")
     time.sleep(10)
     print("%s: Oh, welcome to America! I haven't seen you in months!\n")%(name)
     time.sleep(4)
