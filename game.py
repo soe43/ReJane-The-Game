@@ -591,7 +591,7 @@ def ChanghoonEnding():
     time.sleep(4)
     if('Blouse and Pants' in inventory):
         print("Changhoon: Gomahwuh(thank you), %s. You look really good today. You still have good style.\n")%(name)
-+        time.sleep(4)
+        time.sleep(4)
         print("%s: Thanks, Changhoon. I bought it just for you.\n")%(name)
         time.sleep(4)
         print("I had to buy it if I didn't want to wear some less attractive pieces of clothing.\n")
