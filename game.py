@@ -114,11 +114,11 @@ def day1Interface():
             current_time = current_time + 4
             club(1)
         if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
-            print("The club isn't open yet.")
+            print("\nThe club isn't open yet.")
             time.sleep(3)
             day1Interface()
         if(choice == 'bed'):
-            print("For some reason, you're feeling really sleepy. You decide to go to sleep early so that you'll be refreshed by tomorrow.\n")
+            print("\nFor some reason, you're feeling really sleepy. You decide to go to sleep early so that you'll be refreshed by tomorrow.\n")
             time.sleep(4)
             print("As you lie in bed, you mentally prepare yourself for Changhoon's arrival. He told you over the phone that'll he'll be touching down")
             print("at JFK at around 7:00pm (19:00). It's been a couple of months since you last saw him, and the last time you saw him he was essentially")
@@ -489,6 +489,7 @@ def day2Interface():
     global money
     global makeup
     global name
+    global inventory
     os.system('cls' if os.name == 'nt' else 'clear')
     if(current_time < 19):
         print("\nDay 2")
@@ -540,17 +541,52 @@ def day2Interface():
                 current_time = current_time + 4
                 club(2)
             if(choice == 'club' and (current_time <= 16 or current_time >= 18)):
-                print("The club isn't open yet.")
+                print("\nThe club isn't open yet.")
                 time.sleep(3)
+                day2Interface()
+            if(choice == 'chill'):
+                current_time = current_time + 11
+                print("\nYou chilled out and waited for Changhoon's arrival time.")
+                time.sleep(4)
                 day2Interface()
         else:
             print("It's time to go and pick up Changhoon from the airport. I hope he still remembers what I look like.\n")
+            time.sleep(4)
+            if('Blouse and Pants' in inventory):
+                print("I put on the stylish blouse and pants that I bought when I went out shopping. After trying it on, you look at yourself in the mirror.\n")
+                time.sleep(5)
+                print("You are definitely going to get some head turns with this outfit.\n")
+            else:
+                print("You look around through your house, but you realized you forgot to do your laundry. In a panic, you scramble around looking for any spare clothes")
+                print("around the apartment. You end up finding your old 1999 Disney World t-shirt and a pair of flared blue jeans. After putting it on, you look")
+                print("at yourself in the mirror.\n")
+                time.sleep(10)
+                print("Changhoon is going to get right back on the plane back to Korea after seeing me.\n")
             pause = raw_input("Press Enter To Continue ")
             ChanghoonEnding()
 
 def ChanghoonEnding():
+    global name
+    global inventory
+    global makeup
     os.system('cls' if os.name == 'nt' else 'clear')
-    return
+    print("I hailed a cab outside of my apartment and told the driver to take me JFK. He nodded, and I travelled through Astoria to the airport. I hope I make it in time.\n")
+    time.sleep(5)
+    print("2 Hours Later\n")
+    time.sleep(3)
+    print("In classic fashion, I was an hour late to Changhoon's arrival. We got caught up in some traffic on the Van Wyck Expressway, with the driver yelling at the car in front")
+    print("of him the entire time. When the taxi finally pulled up to the arrivals entrance of Terminal 1, where Korean Air lands, I hastily paid the driver and ran inside. The space")
+    print("was gigantic. There were people bustling left and right, but the only person I cared about wasn't in sight. I looked through the entire gate area, but he was no where in sight.\n")
+    time.sleep(14)
+    print("?: %s? I'm here!\n")%(name)
+    time.sleep(4)
+    print("I recognized that voice instantly. I turned around, and about 5 inches away from my face was Changhoon. He looked a little bit different from before. His hair was longer, and he")
+    print("was starting to grow some stubble on his chin. He smiled at me, and it was the same Park Ji-Sung smile from before. Man, was he handsome.\n")
+    time.sleep(10)
+    print("%s: Oh, welcome to America! I haven't seen you in months!\n")%(name)
+    time.sleep(4)
+    print("Real smooth there.\n")
+    time.sleep(4)
 
 def runGame():
     intro()
@@ -566,7 +602,7 @@ def runGame():
 #naming()
 #story_1()
 #day1Interface()
-story_2()
+#story_2()
           
     
     
