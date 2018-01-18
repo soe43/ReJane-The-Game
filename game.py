@@ -657,7 +657,7 @@ def ChanghoonEnding():
             time.sleep(4)
             print("%s: If you are looking for love, Changhoon, you were looking in the wrong places.")%(name)
             time.sleep(4)
-            print("Changhoon: I'm looking at my love, Jane.\n")%(name)
+            print("Changhoon: I'm looking at my love, %s.\n")%(name)
             time.sleep(3)
             print("Huh?\n")
             time.sleep(2)
