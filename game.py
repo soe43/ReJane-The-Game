@@ -523,7 +523,7 @@ def day2Interface():
                 money = money + 75
                 current_time = current_time + 6
                 day2Interface()
-            if(choice == 'makeup'):
+            if(choice == 'makeup' and not(makeup)):
                 makeup = True
                 money = money - 10
                 current_time = current_time + 1
@@ -531,6 +531,9 @@ def day2Interface():
                 print("and lipstick. You look similar to the Korean version of %s.")%(name)
                 pause = raw_input("Press Enter To Continue ")
                 day2Interface()
+            if(choice == 'makeup' and makeup):
+                print("You already put your makeup on.\n")
+                time.sleep(4)
             if(choice == 'ed' and not(Ed)):
                 current_time = current_time + 6
                 Ed(2)
@@ -595,16 +598,131 @@ def ChanghoonEnding():
         print("%s: Thanks, Changhoon. I bought it just for you.\n")%(name)
         time.sleep(4)
         print("I had to buy it if I didn't want to wear some less attractive pieces of clothing.\n")
-        saw_clothes = True
+        time.sleep(4)
+        pause = raw_input("Press Enter To Continue \n")
     else:
         print("Changhoon: Gamsa(thank you), %s. Is that the fashion trend here in America?\n")%(name)
         time.sleep(4)
         print("%s: Yeah, yeah, this shirt is very popular in the U.S. nowadays.\n")%(name)
         time.sleep(4)
-        print("Congratulations! You made it to the last tree of this beta mode. to start the game over, ")
-        print("press enter and run the game again.")
-        pause = raw_input("Press Enter")
-        
+        #print("Congratulations! You made it to the last tree of this beta mode. to start the game over, ")
+        #print("press enter and run the game again.")
+        print("Changhoon: Are you sure? You look like you just came out of 19999.\n")
+        time.sleep(4)
+        print("I really regret not buying that cute outfit that I saw earlier in Flushing.\n")
+        time.sleep(4)
+        pause = raw_input("Press Enter To Continue \n")
+    print("Changhoon: Anyways, how have you been, Jane? It's been quite a while.\n")
+    time.sleep(4)
+    print("His English skills have definitely gotten better from when I last some him. The Korean accent was inevitably present, but he had a stronger control")
+    print("over his speech and wasn't as shaky as he was before.\n")
+    time.sleep(6)
+    print("<What would you like to say to Changhoon?>\n")
+    print("Option 1: I'm really sorry about what happened between you and Monica.")
+    print("Option 2: I've been pretty busy lately, with my new job and everything.\n")
+    response = raw_input("What would you like to say?(Type the number of the option you want)")
+    while(response != '1' and response != '2'):
+        if(response == '1'):
+            print("%s: \nI'm really sorry about what happened between you and Monica.\n")%(name)
+            time.sleep(3)
+            print("Changhoon: Oh Monica? That cheat? I should have known that she could not stay loyal. She flirts with everyone. It's just her nature.\n")
+            time.sleep(5)
+            print("%s: Is everything going alright? Is there any way I can help?")%(name)
+            time.sleep(4)
+            print("Changhoon: Everything is doing pretty well, considering this is the second time a woman has left me for another man.\n")
+            time.sleep(5)
+            print("Ouch.\n")
+            time.sleep(4)
+            print("%s: How did you find out?...")%(name)
+            time.sleep(4)
+            print("Changhoon: I asked your aunt. She told me why you ran away.\n")
+            time.sleep(4)
+            print("%s: I didn't run away, Changhoon. I just had to leave because it was time to leave.\n")%(name)
+            time.sleep(4)
+            print("Changhoon: And the time was right before you came to meet my parents? How do you think I felt? I feel the same way now.\n")
+            time.sleep(5)
+            print("%s: I couldn't be with you, Changhoon. You knew that all along. You never dated %s. You dated some picturesque version of me.\n")%(name)
+            time.sleep(4)
+            print("Changhoon: But I can still love you for who you were, Jane. Do you think it was just the looks I was after? My motives should be pretty apparent after")
+            print("I got married to Monica.\n")
+            time.sleep(6)
+            print("Did he just call her ugly? Damn.\n")
+            time.sleep(3)
+            print("%s: You married for the sake of getting married? That's why you rushed in with Monica? That's a pretty bad reason, if you ask anyone.\n")%(name)
+            time.sleep(4)
+            print("%s: If you are looking for love, Changhoon, you were looking in the wrong places.")%(name)
+            time.sleep(4)
+            print("Changhoon: I'm looking at my love, Jane.\n")%(name)
+            time.sleep(3)
+            print("Huh?\n")
+            time.sleep(2)
+            print("Changhoon: I missed you so much %s. I missed you so much since you left. Monica was me being reckless, to try to fix my sadness. I miss everything")
+            print("we went through together. I know I made mistakes, but please don't run away from me again. I'm here, and I want to be with you.\n")%(name)
+            time.sleep(4)
+            print("What do you want to say back?\n")
+            print("Option 1: I've thought about it for a while. I think I want to be with you, too.")
+            print("Option 2: I've thought about it for some time. And I think we should stay apart. I don't know for how long, but I much rather stay where we are now.\n")
+            response = raw_input("How do you respond? (Choose the number of the option you want)")
+            while(response != '1' and response != '2'):
+                if(response == '1'):
+                    print("\n%s: I've thought about it for a while. I think I want to be with you, too.\n")%(name)
+                    time.sleep(4)
+                    print("Reader, I told him I loved him. He treated me with so much love and respect, and I completely ignored it. He is perfect for me,")
+                    print("and I can't believe I didn't see that earlier.\n")
+                    time.sleep(6)
+                    print("I brought him to Flushing, and we had some soju and Korean barbeque together. We got to my apartment at around 1am. He wished me a goodnight,")
+                    print("and before I went in he gave me a kiss. Reader, we were on. Again.\n")
+                    time.sleep(7)
+                    print("Congratulations! You have completed the Changhoon ending! To discover more endings, play through the game again.\n")
+                    print("Thanks for playing!")
+                    response = raw_input("Press Enter To Exit")
+                    return
+                if(response == '2'):
+                    print("\n%s: I've thought about it for some time. And I think we should stay apart. I don't know for how long, but I much rather stay where we are now.\n")%(name)
+                    time.sleep(4)
+                    print("Reader, I told him that I couldn't be with him. I didn't deserve him, not after what I had done to him. I never loved him like he loved me,")
+                    print("and I don't expect that to change.\n")
+                    time.sleep(6)
+                    print("Changhoon was visibly sad, but he knew he had to accept the situation. I brought him around New York, and showed him places like Ground Zero.")
+                    print("I then went with him to his hotel, where I gave him a hug and wished him goodnight. Afterwards, I went home, where Nina was already asleep.")
+                    print("I changed, got back into bed, and fell asleep peacefully.\n")
+                    time.sleep(9)
+                    print("Congratulations! You have completed the Solo ending! To discover more endings, play through the game again.\n")
+                    print("Thanks for playing!")
+                    response = raw_input("Press Enter To Exit")
+                    return
+        if(response == '2'):
+            print("%s: I've been pretty busy lately, with my new job and everything.\n")%(name)
+            time.sleep(4)
+            print("Changhoon: New job? What do you do now?\n")
+            time.sleep(4)
+            print("%s: I work as a manager for a business me and Nina run. You remember Nina, right?\n")%(name)
+            time.sleep(4)
+            print("Changhoon: Yea, the American girl who came to Korea to see you? She was ok. You working together now?\n")
+            time.sleep(4)
+            print("%s: Yea, yea, she's a really good mechanic, and I'm good with accounting, so we work well together.\n")%(name)
+            time.sleep(4)
+            print("God, this is so awkward. I haven't seen him in such a long time, and I barely know what's going on in his life. Maybe I should get this over with quickly.\n")
+            time.sleep(4)
+            print("%s: So, uh, do you want to go to see Ground Zero?\n")%(name)
+            tmie.sleep(3)
+            print("Changhoon: Yea, that is good.\n")
+            time.sleep(3)
+            print("Reader, I took him on the most boring trip I could have possibly taken him on. We visited a couple of tourist attractions, but most of the time in complete")
+            print("silence. At the end of the day, it was time to see him to his hotel.\n")
+            time.sleep(4)
+            print("Changhoon: So, uh, thanks for bringing me around. I'll take myself to see some friends tomorrow, so don't worry about me.\n")
+            time.sleep(5)
+            print("%s: Oh, ok. Enjoy the rest of your time in New York! Have fun!.\n")%(name)
+            time.sleep(4)
+            print("I went home right after. It was around 12am. I was exhausted, and as soon as I entered the apartment I threw myself onto my bed. In bed, I began to chuckle.")
+            print("Today was a mess.\n")
+            time.sleep(6)
+            print("Congratulations! You have completed the Mess ending! To discover more endings, play through the game again.\n")
+            print("Thanks for playing!")
+            response = raw_input("Press Enter To Exit")
+            return 
+                
 def runGame():
     intro()
     naming()
@@ -612,7 +730,7 @@ def runGame():
     day1Interface()
 
 #Run the Game
-runGame()
+#runGame()
 
 #Stuff for debugging
 #intro()
@@ -620,6 +738,7 @@ runGame()
 #story_1()
 #day1Interface()
 #story_2()
-#day2Interface()         
+day2Interface()   
+#ChanghoonEnding()      
     
     
