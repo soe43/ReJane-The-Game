@@ -618,15 +618,15 @@ def ChanghoonEnding():
         pause = raw_input("Press Enter To Continue \n")
     print("Changhoon: Anyways, how have you been, Jane? It's been quite a while.\n")
     time.sleep(4)
-    print("His English skills have definitely gotten better from when I last some him. The Korean accent was inevitably present, but he had a stronger control")
+    print("His English skills have definitely gotten better from when I last saw him. The Korean accent was inevitably present, but he had stronger control")
     print("over his speech and wasn't as shaky as he was before.\n")
     time.sleep(6)
     print("<What would you like to say to Changhoon?>\n")
     print("Option 1: I'm really sorry about what happened between you and Monica.")
     print("Option 2: I've been pretty busy lately, with my new job and everything.\n")
     response = raw_input("What would you like to say?(Type the number of the option you want)")
-    while(response != '1' and response != '2'):
-        if(response == '1'):
+    while(response != 1 and response != 2):
+        if(response == 1):
             print("%s: \nI'm really sorry about what happened between you and Monica.\n")%(name)
             time.sleep(3)
             print("Changhoon: Oh Monica? That cheat? I should have known that she could not stay loyal. She flirts with everyone. It's just her nature.\n")
@@ -667,7 +667,7 @@ def ChanghoonEnding():
             print("Option 1: I've thought about it for a while. I think I want to be with you, too.")
             print("Option 2: I've thought about it for some time. And I think we should stay apart. I don't know for how long, but I much rather stay where we are now.\n")
             response = raw_input("How do you respond? (Choose the number of the option you want)")
-            while(response != '1' and response != '2'):
+            while(response != 1 and response != 2):
                 if(response == 1):
                     print("\n%s: I've thought about it for a while. I think I want to be with you, too.\n")%(name)
                     time.sleep(4)
