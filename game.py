@@ -646,7 +646,7 @@ def ChanghoonEnding():
             time.sleep(4)
             print("Changhoon: And the time was right before you came to meet my parents? How do you think I felt? I feel the same way now.\n")
             time.sleep(5)
-            print("%s: I couldn't be with you, Changhoon. You knew that all along. You never dated %s. You dated some picturesque version of me.\n")%(name)
+            print("%s: I couldn't be with you, Changhoon. You knew that all along. You never dated %s. You dated some picturesque version of me.\n")%(name,name)
             time.sleep(4)
             print("Changhoon: But I can still love you for who you were, Jane. Do you think it was just the looks I was after? My motives should be pretty apparent after")
             print("I got married to Monica.\n")
@@ -736,7 +736,7 @@ def runGame():
     day1Interface()
 
 #Run the Game
-#runGame()
+runGame()
 
 #Stuff for debugging
 #intro()
@@ -745,6 +745,6 @@ def runGame():
 #day1Interface()
 #story_2()
 #day2Interface()   
-ChanghoonEnding()      
+#ChanghoonEnding()      
     
     
