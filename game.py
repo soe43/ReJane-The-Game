@@ -574,20 +574,24 @@ def ChanghoonEnding():
     global inventory
     global makeup
     os.system('cls' if os.name == 'nt' else 'clear')
-    print("I hailed a cab outside of my apartment and told the driver to take me JFK. He nodded, and I travelled through Astoria to the airport. I hope I make it in time.\n")
+    print("I hailed a cab outside of my apartment and told the driver to take me JFK. He nodded, and I travelled through Astoria to the airport.")
+    print("I hope I make it in time.\n")
     time.sleep(5)
     print("2 Hours Later\n")
     time.sleep(3)
     print("In classic fashion, I was an hour late to Changhoon's arrival. We got caught up in some traffic on the Van Wyck Expressway, with the driver yelling")
-    print(" at the car in front of him the entire time. When the taxi finally pulled up to the arrivals entrance of Terminal 1, where Korean Air lands, I hastily paid the driver and ran inside.")
-    print("The space was gigantic. There were people bustling left and right, but the only person I cared about wasn't in sight. I looked through the entire gate area, but he was no where in sight.\n")
+    print("at the car in front of him the entire time. When the taxi finally pulled up to the arrivals entrance of Terminal 1, where Korean Air lands,")
+    print("I hastily paid the driver and ran inside.")
+    print("The space was gigantic. There were people bustling left and right, but the only person I cared about wasn't in sight.")
+    print("I looked through the entire gate area, but he was no where in sight.\n")
     time.sleep(14)
     print("?: %s? I'm here!\n")%(name)
     time.sleep(4)
     print("I recognized that voice instantly. I turned around, and about 5 inches away from my face was Changhoon. He looked a little bit different from")
-    print("before. His hair was longer, and he was starting to grow some stubble on his chin. He smiled at me, and it was the same Park Ji-Sung smile from before.")
+    print("before. His hair was longer, and he was starting to grow some stubble on his chin. He smiled at me, and it was the same Park Ji-Sung smile")
+    print("from before.\n")
     print("Man, was he handsome.\n")
-    time.sleep(10)
+    time.sleep(8)
     print("%s: Oh, welcome to America! I haven't seen you in months!\n")%(name)
     time.sleep(4)
     print("Real smooth there.\n")
@@ -607,7 +611,7 @@ def ChanghoonEnding():
         time.sleep(4)
         #print("Congratulations! You made it to the last tree of this beta mode. to start the game over, ")
         #print("press enter and run the game again.")
-        print("Changhoon: Are you sure? You look like you just came out of 19999.\n")
+        print("Changhoon: Are you sure? You look like you just came out of 1999.\n")
         time.sleep(4)
         print("I really regret not buying that cute outfit that I saw earlier in Flushing.\n")
         time.sleep(4)
@@ -659,12 +663,12 @@ def ChanghoonEnding():
             print("Changhoon: I missed you so much %s. I missed you so much since you left. Monica was me being reckless, to try to fix my sadness. I miss everything")
             print("we went through together. I know I made mistakes, but please don't run away from me again. I'm here, and I want to be with you.\n")%(name)
             time.sleep(4)
-            print("What do you want to say back?\n")
+            print("<What do you want to say back?>\n")
             print("Option 1: I've thought about it for a while. I think I want to be with you, too.")
             print("Option 2: I've thought about it for some time. And I think we should stay apart. I don't know for how long, but I much rather stay where we are now.\n")
             response = raw_input("How do you respond? (Choose the number of the option you want)")
             while(response != '1' and response != '2'):
-                if(response == '1'):
+                if(response == 1):
                     print("\n%s: I've thought about it for a while. I think I want to be with you, too.\n")%(name)
                     time.sleep(4)
                     print("Reader, I told him I loved him. He treated me with so much love and respect, and I completely ignored it. He is perfect for me,")
@@ -677,7 +681,7 @@ def ChanghoonEnding():
                     print("Thanks for playing!")
                     response = raw_input("Press Enter To Exit")
                     return
-                if(response == '2'):
+                if(response == 2):
                     print("\n%s: I've thought about it for some time. And I think we should stay apart. I don't know for how long, but I much rather stay where we are now.\n")%(name)
                     time.sleep(4)
                     print("Reader, I told him that I couldn't be with him. I didn't deserve him, not after what I had done to him. I never loved him like he loved me,")
@@ -691,7 +695,7 @@ def ChanghoonEnding():
                     print("Thanks for playing!")
                     response = raw_input("Press Enter To Exit")
                     return
-        if(response == '2'):
+        if(response == 2):
             print("%s: I've been pretty busy lately, with my new job and everything.\n")%(name)
             time.sleep(4)
             print("Changhoon: New job? What do you do now?\n")
