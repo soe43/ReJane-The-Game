@@ -580,7 +580,7 @@ def ChanghoonEnding():
     print("2 Hours Later\n")
     time.sleep(3)
     print("In classic fashion, I was an hour late to Changhoon's arrival. We got caught up in some traffic on the Van Wyck Expressway, with the driver yelling")
-    print("at the car in front of him the entire time. When the taxi finally pulled up to the arrivals entrance of Terminal 1, where Korean Air lands,")
+    print("at the car in front of him the entire time. When the taxi finally pulled up to the arrivals entrance of Terminal 1, where Korean Air lands.")
     print("I hastily paid the driver and ran inside.")
     print("The space was gigantic. There were people bustling left and right, but the only person I cared about wasn't in sight.")
     print("I looked through the entire gate area, but he was no where in sight.\n")
@@ -624,8 +624,8 @@ def ChanghoonEnding():
     print("<What would you like to say to Changhoon?>\n")
     print("Option 1: I'm really sorry about what happened between you and Monica.")
     print("Option 2: I've been pretty busy lately, with my new job and everything.\n")
-    response = raw_input("What would you like to say?(Type 'option' and the number of the option you want ex. option 1)")
     while(response != 'option 1' and response != 'option 2'):
+        response = raw_input("What would you like to say?(Type 'option' and the number of the option you want ex. option 1)")
         if(response == 'option 1'):
             print("%s: \nI'm really sorry about what happened between you and Monica.\n")%(name)
             time.sleep(3)
@@ -666,8 +666,8 @@ def ChanghoonEnding():
             print("<What do you want to say back?>\n")
             print("Option 1: I've thought about it for a while. I think I want to be with you, too.")
             print("Option 2: I've thought about it for some time. And I think we should stay apart. I don't know for how long, but I much rather stay where we are now.\n")
-            response = raw_input("How do you respond? (Choose the number of the option you want in the same way)")
             while(response != 'option 1' and response != 'option 2'):
+                response = raw_input("How do you respond? (Choose the number of the option you want in the same way)")
                 if(response == 'option 1'):
                     print("\n%s: I've thought about it for a while. I think I want to be with you, too.\n")%(name)
                     time.sleep(4)
