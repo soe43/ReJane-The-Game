@@ -744,7 +744,7 @@ def runGame():
 #story_1()
 #day1Interface()
 #story_2()
-day2Interface()   
-#ChanghoonEnding()      
+#day2Interface()   
+ChanghoonEnding()      
     
     
