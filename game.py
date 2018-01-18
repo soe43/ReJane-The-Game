@@ -736,7 +736,7 @@ def runGame():
     day1Interface()
 
 #Run the Game
-runGame()
+#runGame()
 
 #Stuff for debugging
 #intro()
@@ -744,7 +744,7 @@ runGame()
 #story_1()
 #day1Interface()
 #story_2()
-#day2Interface()   
+day2Interface()   
 #ChanghoonEnding()      
     
     
