@@ -624,9 +624,9 @@ def ChanghoonEnding():
     print("<What would you like to say to Changhoon?>\n")
     print("Option 1: I'm really sorry about what happened between you and Monica.")
     print("Option 2: I've been pretty busy lately, with my new job and everything.\n")
-    response = raw_input("What would you like to say?(Type the number of the option you want)")
-    while(response != 1 and response != 2):
-        if(response == 1):
+    response = raw_input("What would you like to say?(Type 'option' and the number of the option you want ex. option 1)")
+    while(response != 'option 1' and response != 'option 2'):
+        if(response == 'option 1'):
             print("%s: \nI'm really sorry about what happened between you and Monica.\n")%(name)
             time.sleep(3)
             print("Changhoon: Oh Monica? That cheat? I should have known that she could not stay loyal. She flirts with everyone. It's just her nature.\n")
@@ -666,9 +666,9 @@ def ChanghoonEnding():
             print("<What do you want to say back?>\n")
             print("Option 1: I've thought about it for a while. I think I want to be with you, too.")
             print("Option 2: I've thought about it for some time. And I think we should stay apart. I don't know for how long, but I much rather stay where we are now.\n")
-            response = raw_input("How do you respond? (Choose the number of the option you want)")
-            while(response != 1 and response != 2):
-                if(response == 1):
+            response = raw_input("How do you respond? (Choose the number of the option you want in the same way)")
+            while(response != 'option 1' and response != 'option 2'):
+                if(response == 'option 1'):
                     print("\n%s: I've thought about it for a while. I think I want to be with you, too.\n")%(name)
                     time.sleep(4)
                     print("Reader, I told him I loved him. He treated me with so much love and respect, and I completely ignored it. He is perfect for me,")
@@ -681,7 +681,7 @@ def ChanghoonEnding():
                     print("Thanks for playing!")
                     response = raw_input("Press Enter To Exit")
                     return
-                if(response == 2):
+                if(response == 'option 2'):
                     print("\n%s: I've thought about it for some time. And I think we should stay apart. I don't know for how long, but I much rather stay where we are now.\n")%(name)
                     time.sleep(4)
                     print("Reader, I told him that I couldn't be with him. I didn't deserve him, not after what I had done to him. I never loved him like he loved me,")
@@ -695,7 +695,7 @@ def ChanghoonEnding():
                     print("Thanks for playing!")
                     response = raw_input("Press Enter To Exit")
                     return
-        if(response == 2):
+        if(response == 'option 2'):
             print("%s: I've been pretty busy lately, with my new job and everything.\n")%(name)
             time.sleep(4)
             print("Changhoon: New job? What do you do now?\n")
